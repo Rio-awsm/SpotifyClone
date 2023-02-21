@@ -64,7 +64,7 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
         gif.style.opacity=1;
        e.target.classList.remove("fa-play-circle");
        e.target.classList.add("fa-pause-circle");
-       audioElement.src='songs/${songIndex+1}.mp3';
+       audioElement.src=`songs/${songIndex+1}.mp3`;
        audioElement.currentTime=0;
        audioElement.play();
        masterPlay.classList.remove("fa-play-circle");
@@ -79,7 +79,7 @@ document.getElementById('next').addEventListener('click',()=>{
     songIndex +=1;
     }
     masterSongName.innerText= songs[songIndex].songName;
-    audioElement.src='songs/{songIndex+1}.mp3';
+    audioElement.src=`songs/${songIndex+1}.mp3`;
        audioElement.currentTime=0;
        audioElement.play();
        masterPlay.classList.remove("fa-play-circle");
